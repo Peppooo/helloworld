@@ -9,8 +9,8 @@ buildall:
 	@mv main bin/helloworld-go
 	@pkg javascript/main.js -o bin/helloworld-javascript
 	@pyinstaller python/main.py --onefile
-	@mv dist/main/main bin/helloworld-python
-	@dmd d/main.d -o bin/helloworld-d
+	@dmd d/main.d
+	@mv ./main ./bin/helloworld-d
 	@rustc rust/main.rs -o bin/helloworld-rust
 
 installreq:
@@ -23,7 +23,7 @@ installreq:
 	@sudo apt install python3
 	@sudo apt install python3-pip
 	@sudo pip3 install pyinstaller
-	@sudo apt install dmd
+	@sudo snap install dmd
 	@sudo apt install rustc
 	@echo
 	@echo Installation completed
