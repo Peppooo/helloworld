@@ -1,4 +1,4 @@
-# Hello world
+# **Hello world**
 
 ## Install all build requirements
 ```sh
@@ -6,5 +6,7 @@ make installreq
 ```
 
 ## Build all
-make build
+
+```
+make buildall
 ```
